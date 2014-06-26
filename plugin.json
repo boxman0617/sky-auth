@@ -15,7 +15,10 @@
 			"url": "http://deeplogik.com"
 		}
 	],
+  "localInstall": ["install"],
+  "onLoad": "up.php",
 	"file": "SkyAuth.plugin.php",
+  "getID": "SkyAuth",
 	"repos": [
 		{"git": "https://github.com/boxman0617/sky-auth.git"}
 	],
