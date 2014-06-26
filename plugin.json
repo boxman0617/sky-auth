@@ -1,0 +1,24 @@
+{
+	"name": "sky-auth",
+	"description": "SKY's Authentication/Authorization system",
+	"version": "0.0.1",
+	"keywords": ["sky", "auth", "authentication", "authorization"],
+	"bugs": {
+		"url": "https://github.com/boxman0617/sky-auth/issues",
+		"email": "alan@deeplogik.com"
+	},
+	"license": "MIT",
+	"creators": [
+		{
+			"name": "Alan Tirado",
+			"email": "alan@deeplogik.com",
+			"url": "http://deeplogik.com"
+		}
+	],
+	"file": "SkyAuth.plugin.php",
+	"repos": [
+		{"git": "https://github.com/boxman0617/sky-auth.git"}
+	],
+	"phpVersion": ">=5.0.0",
+  "SKYVersion": ">=1.0.0"
+}
