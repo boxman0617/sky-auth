@@ -2,8 +2,9 @@
 Event::SubscribeActionHook('/Controller/before/HandleRequest/', 'SkyAuth::Protect');
 Event::SubscribeActionHook('/Router/before/ControllerInit/', 'SkyAuth::AssertAuthorized');
 
-SkyL::Import(SkyDefines::Call('SKYCORE_LIB').'/plugins/'.Plugin::$plugin['skyauth']['json']);
-$__ConfigFile__ = SkyDefines::Call('DIR_LIB_PLUGINS').'/skyauth/'.Plugin::$plugin['skyauth']['configfile'];
+SkyL::Import(Plugin::GetFile($plugin));
+$__PluginDir__ = Plugin::GetPluginDir($plugin);
+$__ConfigFile__ = $__PluginDir__.'/configs.php';
 if(file_exists($__ConfigFile__))
 {
   SkyL::Import($__ConfigFile__);
