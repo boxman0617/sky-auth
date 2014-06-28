@@ -1,7 +1,7 @@
 {
 	"name": "sky-auth",
 	"description": "SKY's Authentication/Authorization system",
-	"version": "0.0.1",
+	"version": "0.0.4",
 	"keywords": ["sky", "auth", "authentication", "authorization"],
 	"bugs": {
 		"url": "https://github.com/boxman0617/sky-auth/issues",
@@ -15,7 +15,7 @@
 			"url": "http://deeplogik.com"
 		}
 	],
-  "localInstall": ["install"],
+  "localInstall": "install",
   "onLoad": "up.php",
 	"file": "SkyAuth.plugin.php",
   "getID": "SkyAuth",

@@ -3,6 +3,8 @@
 define('AUTH_ALLOW_ALL', true);
 define('AUTH_DENY_ALL', false);
 
+SkyAuth::SetDenyPage('deny.page.php');
+
 $_AUTH['DEV'] = array(
     'OnFailureRoute'    => '/',
     'OnSuccessRoute'    => '/',

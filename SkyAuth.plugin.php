@@ -20,6 +20,7 @@ class SkyAuth
 
     private static $Success = false;
     private static $Logout = false;
+    private static $DenyPage = 'deny.page.php';
 
     public static function Protect(Controller $controller)
     {
@@ -30,6 +31,11 @@ class SkyAuth
                 return self::IsAuthenticated($controller);
         }
         return true;
+    }
+
+    public static function SetDenyPage($page)
+    {
+      self::$DenyPage = $page;
     }
 
     // ## Use in VIEWS
@@ -100,7 +106,7 @@ class SkyAuth
 
     private static function AccessDenied()
     {
-        SkyL::Import(SkyDefines::Call('DIR_LIB_PLUGINS').'/skyauth/'.Plugin::$plugin['skyauth']['denypage']);
+        SkyL::Import(SkyDefines::Call('DIR_LIB_PLUGINS').'/sky-auth/'.self::$DenyPage);
         exit();
     }
 
