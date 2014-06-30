@@ -5,7 +5,7 @@ Event::SubscribeActionHook('/Router/before/ControllerInit/', 'SkyAuth::AssertAut
 SkyL::Import(Plugin::GetFile($plugin));
 $__PluginDir__ = Plugin::GetPluginDir($plugin);
 SkyL::Import($__PluginDir__.'/SkyAuthUser.interface.php');
-$__ConfigFile__ = $__PluginDir__.'/configs.php';
+$__ConfigFile__ = Plugin::GetLocalPluginDir($plugin).'/configs.php';
 if(file_exists($__ConfigFile__))
 {
   SkyL::Import($__ConfigFile__);
