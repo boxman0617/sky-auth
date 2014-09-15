@@ -1,7 +1,7 @@
 {
 	"name": "sky-auth",
 	"description": "SKY's Authentication/Authorization system",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"keywords": ["sky", "auth", "authentication", "authorization"],
 	"bugs": {
 		"url": "https://github.com/boxman0617/sky-auth/issues",

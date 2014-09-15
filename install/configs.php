@@ -1,18 +1,14 @@
 <?php
-
-define('AUTH_ALLOW_ALL', true);
-define('AUTH_DENY_ALL', false);
-
 SkyAuth::SetDenyPage('deny.page.php');
 
-$_AUTH['DEV'] = array(
+SkyAuth::$_AUTH['DEV'] = array(
     'OnFailureRoute'    => '/',
     'OnSuccessRoute'    => '/',
     'OnFailureFlash'    => 'Unable to authenticate user. Please try again...',
     'Domain'            => 'YourDomainGoesHere'
 );
 
-$_ACCESS_CONTROL = array(
+SkyAuth::$_ACCESS_CONTROL = array(
     'Dashboard' => array(
         'Main'          => AUTH_ALLOW_ALL
     )

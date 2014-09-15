@@ -4,6 +4,8 @@ define('AUTH_DENY_ALL', false);
 
 class SkyAuth
 {
+    public static $_AUTH = array();
+    public static $_ACCESS_CONTROL = array();
     public static $Settings = array(
         ':ENV' => array(
             'BcryptRounds'      => 12,
@@ -144,6 +146,7 @@ class SkyAuth
     {
         $bcrypt = new Bcrypt(self::$Settings[':ENV']['BcryptRounds']);
         $user->SetPassword($bcrypt->hash($user->GetPassword()));
+        return $user;
     }
 
     public static function IsAuthenticated(Controller $controller)
